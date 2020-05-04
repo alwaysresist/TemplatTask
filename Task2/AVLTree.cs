@@ -202,26 +202,6 @@ namespace Task2
             return false;
         }
 
-        void Dispose(AVLnode ptr)
-        {
-            if (ptr != null)
-            {
-                if (ptr.left != null)
-                {
-                    this.Dispose(ptr.left);
-                }
-                if (ptr.right != null)
-                {
-                    this.Dispose(ptr.right);
-                }
-            }
-        }
-
-        public void _insert(T data) 
-        {
-            this._Insert(ref this.root, data);
-            this.count += 1;
-        }
         void FindToDel(ref AVLnode replaceable, AVLnode ptr, ref AVLnode temp)
         {
             if (replaceable.right != null)
